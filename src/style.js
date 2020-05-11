@@ -1,4 +1,6 @@
 import { StyleSheet } from "react-native";
+import { RFValue } from 'react-native-responsive-fontsize';
+import { Colors, FONT_FAMILY } from '../../../src/Constants';
 
 const styles = StyleSheet.create({
   background: {
@@ -22,7 +24,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#333",
     fontWeight: "500",
-    lineHeight: 25
+    // lineHeight: 25
   },
   message: {
     textAlign: "center",
@@ -31,10 +33,12 @@ const styles = StyleSheet.create({
     paddingTop: 10
   },
   buttonContainer: {
+    width:'100%',
     flexDirection: "row",
     justifyContent: "center",
-    borderRadius: 5,
-    flexWrap: "wrap"
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+    // flexWrap: "wrap"
   },
   button: {
     backgroundColor: "#00ACEF",
@@ -53,7 +57,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#FFF",
     fontWeight: "600"
-  }
+  },
+
 });
 
 export default styles;

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Text, View, Animated, Modal, TouchableOpacity } from "react-native";
+import { Text, View, Animated, Modal, TouchableOpacity, StyleSheet } from "react-native";
+import Button from '../../../src/components/Button'
+import { RFValue } from 'react-native-responsive-fontsize';
+import { Colors, FONT_FAMILY } from '../../../src/Constants';
 
 import styles from "./style";
 
@@ -77,6 +80,7 @@ class AlertPro extends Component {
         animationType="none"
         supportedOrientations={SUPPORTED_ORIENTATIONS}
         onRequestClose={closeOnPressBack ? this.close : null}
+        style={{ overflow: 'hidden', borderRadius: 15 }}
       >
         <TouchableOpacity
           activeOpacity={1}
@@ -94,31 +98,71 @@ class AlertPro extends Component {
           >
             <TouchableOpacity activeOpacity={1}>
               <View style={styles.content}>
-                <Text style={[styles.title, customStyles.title]}>{title}</Text>
+                <Text allowFontScaling={false} style={[styles.title, customStyles.title]}>{title}</Text>
                 {message ? (
-                  <Text style={[styles.message, customStyles.message]}>{message}</Text>
+                  <Text allowFontScaling={false} style={[styles.message, customStyles.message]}>{message}</Text>
                 ) : null}
               </View>
 
-              <View style={styles.buttonContainer}>
-                {showCancel ? (
-                  <TouchableOpacity
-                    testID="buttonCancel"
-                    onPress={this.onCancel}
-                    style={[styles.button, styles.buttonCancel, customStyles.buttonCancel]}
-                  >
-                    <Text style={[styles.textButton, customStyles.textCancel]}>{textCancel}</Text>
-                  </TouchableOpacity>
-                ) : null}
+              <View style={[styles.buttonContainer, { overflow: 'hidden' }]}>
+
                 {showConfirm ? (
-                  <TouchableOpacity
+                  <Button
                     testID="buttonConfirm"
+                    titleProps={{ allowFontScaling: false }}
+                    title={textCancel}
+                    containerStyle={{ flex: 1 }}
+                    buttonStyle={[
+                      {
+                        backgroundColor: 'transparent',
+                        borderRadius: 0,
+                        borderBottomLeftRadius: 10,
+                        borderColor: Colors.Secondary,
+                        borderBottomRightRadius: 15
+                      },
+                    ]} titleStyle={[styles.btnSignUpTitle, { fontSize: RFValue(12) }]}
+                    onPress={this.onCancel}
+                  />
+
+                  // <TouchableOpacity
+                  //   testID="buttonConfirm"
+                  //   onPress={this.onConfirm}
+                  //   style={[styles.button, customStyles.buttonConfirm]}
+                  // >
+                  //   <Text allowFontScaling={false} style={[styles.textButton, customStyles.textConfirm]}>{textConfirm}</Text>
+                  // </TouchableOpacity>
+                )
+                  : null}
+
+                {showCancel ? (
+
+                  <Button
+                    whiteBackground
+                    testID="buttonCancel"
+                    titleProps={{ allowFontScaling: false }}
+                    title={textConfirm}
+                    containerStyle={{ flex: 1 }}
+                    buttonStyle={{
+                      // backgroundColor: 'transparent',
+                      borderRadius: 0,
+                      // borderBottomRightRadius: 10,
+                      borderWidth: 1,
+                      borderColor: Colors.Secondary,
+                      // borderBottomLeftRadius: 15
+                    }}
+                    titleStyle={[styles.btnLoginTitle, { fontSize: RFValue(12) }]}
                     onPress={this.onConfirm}
-                    style={[styles.button, customStyles.buttonConfirm]}
-                  >
-                    <Text style={[styles.textButton, customStyles.textConfirm]}>{textConfirm}</Text>
-                  </TouchableOpacity>
+                  />
+
+                  // <TouchableOpacity
+                  //   testID="buttonCancel"
+                  //   onPress={this.onCancel}
+                  //   style={[styles.button, styles.buttonCancel, customStyles.buttonCancel]}
+                  // >
+                  //   <Text allowFontScaling={false} style={[styles.textButton, customStyles.textCancel]}>{textCancel}</Text>
+                  // </TouchableOpacity>
                 ) : null}
+
               </View>
             </TouchableOpacity>
           </Animated.View>

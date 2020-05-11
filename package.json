@@ -1,31 +1,37 @@
 {
-  "name": "react-native-alert-pro",
-  "version": "1.1.2",
-  "description": "The Pro Version of React Native Alert (Android & iOS)",
-  "main": "index.js",
-  "typings": "index.d.ts",
-  "scripts": {
-    "test": "jest --coverage"
+  "_from": "react-native-alert-pro",
+  "_id": "react-native-alert-pro@1.1.2",
+  "_inBundle": false,
+  "_integrity": "sha512-fpc3TpiSnFmNOuHrn1ORj/9Mnqua/AJJ3EZg2a+FgDGZAWoEAiglX3bINLfdH6zf5YEEfK5w72B/QW/htzwYKg==",
+  "_location": "/react-native-alert-pro",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-alert-pro",
+    "name": "react-native-alert-pro",
+    "escapedName": "react-native-alert-pro",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nysamnang/react-native-alert-pro.git"
-  },
-  "keywords": [
-    "react-native-alert",
-    "sweet-alert",
-    "awesome-alert",
-    "alert",
-    "alert-pro",
-    "confirm",
-    "dialog"
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "author": "NY Samnang",
-  "license": "MIT",
+  "_resolved": "https://registry.npmjs.org/react-native-alert-pro/-/react-native-alert-pro-1.1.2.tgz",
+  "_shasum": "df103dab51d32436e61515d4e5fd82d0c34f52a0",
+  "_spec": "react-native-alert-pro",
+  "_where": "/Users/man/Desktop/new/Mob_7ader - New",
+  "author": {
+    "name": "NY Samnang"
+  },
   "bugs": {
     "url": "https://github.com/nysamnang/react-native-alert-pro/issues"
   },
-  "homepage": "https://github.com/nysamnang/react-native-alert-pro#readme",
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "The Pro Version of React Native Alert (Android & iOS)",
   "devDependencies": {
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
@@ -44,10 +50,32 @@
     "react-dom": "^16.8.3",
     "react-native": "^0.61.2"
   },
+  "homepage": "https://github.com/nysamnang/react-native-alert-pro#readme",
   "jest": {
     "preset": "react-native",
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
     }
-  }
+  },
+  "keywords": [
+    "react-native-alert",
+    "sweet-alert",
+    "awesome-alert",
+    "alert",
+    "alert-pro",
+    "confirm",
+    "dialog"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-alert-pro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nysamnang/react-native-alert-pro.git"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "typings": "index.d.ts",
+  "version": "1.1.2"
 }
