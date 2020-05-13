@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Text, View, Animated, Modal, TouchableOpacity, StyleSheet } from "react-native";
 import Button from '../../../src/components/Button'
 import { RFValue } from 'react-native-responsive-fontsize';
-import { Colors, FONT_FAMILY } from '../../../src/Constants';
+import { Colors, FONT_FAMILY } from '../../../src/Constants';;;
 
 import styles from "./style";
 
